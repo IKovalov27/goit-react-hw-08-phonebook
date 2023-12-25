@@ -9,6 +9,9 @@ import Login from 'pages/Login/Login';
 import { PrivateRoute } from 'components/Private/PrivateRoute';
 import Contacts from 'pages/Contacts';
 
+import NotFound from 'pages/NotFound';
+
+
 export const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -22,6 +25,7 @@ export const App = () => {
         <Route path="/" element={<PublicRoute />}>
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
         <Route path="/" element={<PrivateRoute />}>
           <Route path="/contacts" element={<Contacts />} />

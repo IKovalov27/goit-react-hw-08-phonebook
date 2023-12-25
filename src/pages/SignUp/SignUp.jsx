@@ -37,10 +37,14 @@ const SignUp = () => {
         setEmail('');
         setPassword('');
       })
-      .catch(() => alert('Please enter all input'));
+      .catch(() => alert('Sorry, there is some trouble, try again later'));
   };
   return (
     <Container>
+      <Container className="align-items-center d-flex flex-column justify-content-center mt-4">
+          <h1>Welcome please login</h1>
+      </Container>
+      
       <Form onSubmit={handleOnSubmit}>
         <Form.Group controlId="formBasicEmail">
           <Label>Name</Label>
@@ -60,6 +64,7 @@ const SignUp = () => {
             value={email}
             type="email"
             placeholder="Enter email"
+            autoComplete="Username email"
           />
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
@@ -73,6 +78,7 @@ const SignUp = () => {
             name="password"
             value={password}
             placeholder="Password"
+            autoComplete="current-password"
           />
         </Form.Group>
         <Button type="submit">

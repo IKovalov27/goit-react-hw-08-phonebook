@@ -34,11 +34,15 @@ const Login = () => {
         setEmail('');
         setPassword('');
       })
-      .catch(() => alert('Please fill all fields'));
+      .catch(() => alert('Sorry, there is some trouble, try again later'));
   };
 
   return (
     <Container>
+      <Container className="align-items-center d-flex flex-column justify-content-center mt-4">
+          <h1>Welcome please login</h1>
+      </Container>
+
       <Form onSubmit={handleOnSubmit}>
         <Form.Group controlId="formBasicEmail">
           <Label>Email</Label>
@@ -48,6 +52,7 @@ const Login = () => {
             value={email}
             type="email"
             placeholder="Enter email"
+            autoComplete="Username email"
           />
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
@@ -61,6 +66,7 @@ const Login = () => {
             name="password"
             value={password}
             placeholder="Password"
+            autoComplete="current-password"
           />
         </Form.Group>
         <Button type="submit">

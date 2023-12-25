@@ -17,7 +17,7 @@ export const ContactList = ({ listContact }) => {
             <Wrapper>
               <FaUserAlt className={css.icon} />
             </Wrapper>
-            {cont.name}: {cont.phone}
+            {cont.name}: {cont.number}
             <Button 
               type="button"          
               onClick={() => {

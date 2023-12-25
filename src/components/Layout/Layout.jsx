@@ -3,6 +3,8 @@ import { LuContact2 } from "react-icons/lu";
 import { Container, Nav, SNavLink, LogoWrapper, LinkWrapper, WrapperItem } from './Layout.styled.js';
 import css from './Layout.module.css';
 
+import InfoUser from '../InfoUser/InfoUser';
+
 const Layout = () => {
   return (
     <>
@@ -24,12 +26,10 @@ const Layout = () => {
               </SNavLink>
             </WrapperItem>
           </LinkWrapper>
+
+          <InfoUser className="d-flex flex-column" />
         </Container>
       </Nav>
-
-      <Container className="align-items-center d-flex flex-column justify-content-center mt-4">
-          <h1>Welcome please login</h1>
-      </Container>
     </>
   );
 };
