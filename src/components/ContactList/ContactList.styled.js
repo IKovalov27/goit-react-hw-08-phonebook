@@ -1,10 +1,19 @@
 import styled from 'styled-components';
 
 export const List = styled.ul`
+  font-weight: 600;
+
   padding: 0;
   margin: 20px 0 0 0;
 
   list-style: none;
+
+  max-width: 400px;
+  width: 290px;
+
+  @media (min-width: 425px) {
+    width: 400px;
+  }
 `;
 
 export const Item = styled.li`
@@ -26,6 +35,7 @@ export const Button = styled.button`
   border-radius: 5px;
 
   margin-left: auto;
+  transition: 250ms;
 
   &:hover {
     background-color: rgba(92, 92, 92, 0.847);

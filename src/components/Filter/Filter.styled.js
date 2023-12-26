@@ -9,4 +9,8 @@ export const Title = styled.p`
 export const Input = styled.input`
   width: 290px;
   padding: 3px;
+
+  @media (min-width: 425px) {
+    width: 400px;
+  }
 `;

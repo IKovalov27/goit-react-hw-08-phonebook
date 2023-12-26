@@ -1,30 +1,36 @@
-const { Button } = require('react-bootstrap');
-const { useSelector, useDispatch } = require('react-redux');
-const { selectUser } = require('redux/user/userSelect');
-const { logoutThunk } = require('redux/user/userThunk');
+import React from 'react';
+import { useNavigate } from 'react-router-dom'; 
+
+import { Button } from './InfoUser.styled'; 
 
 const InfoUser = () => {
-  const user = useSelector(selectUser);
-  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const handleSubmit = () => {
-    dispatch(logoutThunk());
+    navigate('/login');
   };
+
   return (
     <div>
-      {user && (
-        <div className=" d-flex gap=10">
-          <Button
-            bg="black"
-            variant="dark"
-            className="d-flex "
-            onClick={handleSubmit}
-          >
+        <div>
+          <Button onClick={handleSubmit}>
             Log Out
           </Button>
         </div>
-      )}
     </div>
   );
 };
 
 export default InfoUser;
+
+
+
+
+
+
+
+
+
+
+
+

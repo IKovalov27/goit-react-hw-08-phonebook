@@ -2,6 +2,7 @@ import { ContactForm } from 'components/ContactForm/ContactForm';
 import { Filter } from 'components/Filter/Filter';
 import { ContactList } from 'components/ContactList/ContactList';
 
+import { Title } from './Contacts.styled';
 import css from '../components/App.module.css';
 
 const { useEffect } = require('react');
@@ -23,8 +24,11 @@ const Contacts = () => {
   }, [dispatch]);
   return (
     <div className={css.container}>
-      <ContactForm />
-      <Filter />
+      <ContactForm/>
+      <div>
+        <Title>Contacts</Title>
+        <Filter />
+      </div>
       <ContactList listContact={filterContact()} />
     </div>
   );

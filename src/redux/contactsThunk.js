@@ -1,44 +1,39 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { addContacts, delContacts, getContacts } from 'service/contactsAPI';
-import { token } from 'service/userApi';
+
 
 export const getContactsThunk = createAsyncThunk(
   'contacts/allContacts',
-  async (evt, { rejectWithValue, getState }) => {
+  async (_, { reject }) => {
     try {
-      const tempToken = getState().auth.token;
-      if (!tempToken) {
-        return rejectWithValue('token is invalid');
-      }
-      token.set(tempToken);
       const data = getContacts();
       return data;
     } catch (error) {
-      return rejectWithValue(error.message);
+      return reject(error.message);
     }
   }
 );
 
 export const addContactsThunk = createAsyncThunk(
   'contacts/addContact',
-  async (contact, { rejectWithValue }) => {
+  async (contact, { reject }) => {
     try {
       const data = addContacts(contact);
       return data;
     } catch (error) {
-      return rejectWithValue(error.message);
+      return reject(error.message);
     }
   }
 );
 
 export const delContactsThunk = createAsyncThunk(
   'contacts/delContact',
-  async (id, { rejectWithValue }) => {
+  async (id, { reject }) => {
     try {
       const data = delContacts(id);
       return data;
     } catch (error) {
-      return rejectWithValue(error.message);
+      return reject(error.message);
     }
   }
 );
