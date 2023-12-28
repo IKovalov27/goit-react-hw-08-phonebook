@@ -1,5 +1,5 @@
 import axios from 'axios';
 
-export const backendAPI = axios.create({
+export const backend = axios.create({
   baseURL: 'https://connections-api.herokuapp.com/',
 });
