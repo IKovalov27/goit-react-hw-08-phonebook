@@ -1,4 +1,4 @@
-/*import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import {
   addContactsThunk,
   delContactsThunk,
@@ -48,13 +48,13 @@ const sliceContact = createSlice({
 });
 
 export const { addContactsActions, delContactsActions } = sliceContact.actions;
-export const contactsReducer = sliceContact.reducer;*/
+export const contactsReducer = sliceContact.reducer;
 
 
 
 
 
-import { createSlice } from '@reduxjs/toolkit';
+/*import { createSlice } from '@reduxjs/toolkit';
 import {
   addContactsThunk,
   delContactsThunk,
@@ -97,4 +97,4 @@ const sliceContact = createSlice({
 });
 
 export const { addContactsActions, delContactsActions } = sliceContact.actions;
-export const contactsReducer = sliceContact.reducer;
+export const contactsReducer = sliceContact.reducer;*/
