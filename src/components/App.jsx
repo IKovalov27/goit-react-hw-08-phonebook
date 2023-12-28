@@ -6,10 +6,16 @@ import { Route, Routes } from 'react-router-dom';
 import { PublicRoute } from 'components/Public/PublicRoute';
 import SignUp from 'pages/SignUp/SignUp';
 import Login from 'pages/Login/Login';
-import { PrivateRoute } from 'components/Private/PrivateRoute';
+
 import Contacts from 'pages/Contacts';
 
 import NotFound from 'pages/NotFound';
+
+
+
+// eslint-disable-next-line no-lone-blocks
+{/* import { PrivateRoute } from 'components/Private/PrivateRoute'; */}
+
 
 
 export const App = () => {
