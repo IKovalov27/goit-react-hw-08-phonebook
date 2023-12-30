@@ -12,8 +12,7 @@ import Contacts from 'pages/Contacts';
 
 import NotFound from 'pages/NotFound';
 
-
-{/* import { PrivateRoute } from 'components/Private/PrivateRoute'; */}
+import { PrivateRoute } from 'components/Private/PrivateRoute';
 
 
 
@@ -32,7 +31,7 @@ export const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Route>
-        <Route path="/" element={<PublicRoute />}>
+        <Route path="/" element={<PrivateRoute />}>
           <Route path="/contacts" element={<Contacts />} />
         </Route>
       </Routes>
