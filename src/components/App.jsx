@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 import { useDispatch } from 'react-redux';
 import { refreshUserThunk } from 'redux/user/userThunk';
 import { useEffect } from 'react';
@@ -11,7 +12,8 @@ import Contacts from 'pages/Contacts';
 
 import NotFound from 'pages/NotFound';
 
-import { PrivateRoute } from 'components/Private/PrivateRoute';
+
+{/* import { PrivateRoute } from 'components/Private/PrivateRoute'; */}
 
 
 
@@ -30,7 +32,7 @@ export const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Route>
-        <Route path="/" element={<PrivateRoute />}>
+        <Route path="/" element={<PublicRoute />}>
           <Route path="/contacts" element={<Contacts />} />
         </Route>
       </Routes>

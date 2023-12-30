@@ -1,30 +1,30 @@
-import { backend } from 'redux/BaseHttp/BaseHttp';
+import { backendAPI } from 'redux/BaseHttp/BaseHttp';
 
 export const token = {
   set: token => {
-    backend.defaults.headers.Authorization = `Bearer ${token}`;
+    backendAPI.defaults.headers.Authorization = `Bearer ${token}`;
   },
   unSet: token => {
-    backend.defaults.headers.Authorization = '';
+    backendAPI.defaults.headers.Authorization = '';
   },
 };
 
 export const signUpUser = async credentials => {
-  const { data } = await backend.post('users/signup', credentials);
+  const { data } = await backendAPI.post('users/signup', credentials);
   return data;
 };
 
 export const loginUser = async credentials => {
-  const { data } = await backend.post('users/login', credentials);
+  const { data } = await backendAPI.post('users/login', credentials);
   console.log(data);
   return data;
 };
 
 export const logoutUser = async () => {
-  return backend.post('users/logout');
+  return backendAPI.post('users/logout');
 };
 
 export const currentUser = async () => {
-  const data = await backend.get('users/current');
+  const data = await backendAPI.get('users/current');
   return data;
 };
