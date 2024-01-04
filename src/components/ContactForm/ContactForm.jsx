@@ -30,7 +30,7 @@ export const ContactForm = () => {
         const notifly = () => toast(`"${name}" is alredy in contacts`);
         const contact = {
           name: name,
-          phone: number,
+          number: number,
         };
         e.preventDefault();
         if (
@@ -85,3 +85,12 @@ export const ContactForm = () => {
     </Form>
   );
 };
+
+
+
+
+
+
+
+
+
