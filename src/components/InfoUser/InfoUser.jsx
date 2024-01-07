@@ -1,13 +1,15 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; 
-
 import { Button } from './InfoUser.styled'; 
 
-const InfoUser = () => {
-  const navigate = useNavigate();
+const { useDispatch } = require('react-redux');
+const { logoutThunk } = require('redux/user/userThunk');
 
+
+const InfoUser = () => {
+
+  const dispatch = useDispatch();
   const handleSubmit = () => {
-    navigate('/login');
+    dispatch(logoutThunk());
   };
 
   return (
@@ -21,7 +23,10 @@ const InfoUser = () => {
   );
 };
 
-export default InfoUser;
+export default InfoUser;    
+
+
+
 
 
 
